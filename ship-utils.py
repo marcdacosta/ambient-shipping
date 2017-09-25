@@ -24,7 +24,7 @@ container_number = "TEMU6379303"
 def find_most_recent_snapshotid(dataset_id):
 	# for a particular enigma dataset, find the most recent update of the table.
 	url = "https://public.enigma.com/api/datasets/" + dataset_id
-	r = requests.get(url)	
+	r = requests.get(url)
 	most_recent_snapshot_payload = r.json()
 	most_recent_snapshot = most_recent_snapshot_payload['current_snapshot']['id'] #most recent Enigma data snapshot for given dataset_id
 	return most_recent_snapshot
