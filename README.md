@@ -5,7 +5,7 @@ This repo contains utilities for capturing AIS messages broadcast by passing shi
 ### Overview:
 Ambient Shipping enables you to look inside cargo ships. It has two main components:
 
-  - `ship-utils.py`: A simple set of functions that enables (1) the translation between an MMSI and a Vessel's Name and (2) wrappers around the [Enigma Public API](https://public.enigma.com) to query bill of lading import records for that Vessel to reveal what is inside it.
+  - `ship-utils.py`: A simple set of functions that enables (1) the translation between an MMSI and a Vessel's Name and (2) wrappers around the [Enigma Public API](https://public.enigma.com) to query Bill of Lading Import Records for that Vessel to reveal what is inside it.
  
   - `ais-server.py`: A data relay server for relaying decoded AIS transmissions to a remote database server. It is intended to be run on a small linux machine with a SDR (e.g. a raspberry pi) and in proximity to waterways frequented by cargo ships. 
 
@@ -19,7 +19,7 @@ The [Automatic Identification System (AIS)](https://en.wikipedia.org/wiki/Automa
 ![AIS Transceiver](https://s3.amazonaws.com/marcdacosta.com/storage/Matsutec-boat-GPS-navigation-equipment-5-6-Color-LCD-Marine-GPS-SBAS-Navigator-w-High-Sensitivity.jpg_640x640.jpg)
 
 
-There are many different types of AIS messages that are broadcast ([detailed here] (https://en.wikipedia.org/wiki/Automatic_identification_system#AIS_messages)) but, most commonly, an AIS transceiver sends basic positional data every 2 to 10 seconds depending on a vessel's speed while underway, and every 3 minutes while a vessel is at anchor.
+There are many different types of AIS messages that are broadcast ([detailed here](https://en.wikipedia.org/wiki/Automatic_identification_system#AIS_messages)) but, most commonly, an AIS transceiver sends basic positional data every 2 to 10 seconds depending on a vessel's speed while underway, and every 3 minutes while a vessel is at anchor.
 
 Using a [RTL-SDR](https://www.amazon.com/NooElec-NESDR-Mini-Compatible-Packages/dp/B009U7WZCA) dongle, these transmissions can be picked up and decoded. The [RTL-AIS](https://github.com/dgiardini/rtl-ais) project is quite useful as a local server which will receive AIS messages and output them on a local host port. It must be run as a background process for `ais-server.py` to function properly.
 
