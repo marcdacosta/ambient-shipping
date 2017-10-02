@@ -68,3 +68,7 @@ The MMSI field contains the ship's Maritime Mobile Service Identity number. The 
 The `ship-utils.py` contains a function for looking up the MMSI with the ITU in order to find out the Vessel Name (you can also get the Vessel's satellite phone number if you're interested in giving them a call). If the ship is transporting containers or other commodities, the Vessel Name can be used to query the [Enigma Public API](https://public.enigma.com) to discover what the ship contains. 
 
 The script relies upon data published in the Automated Manifest System by the US Customs and Border Protection. It contains structured copies of the bills of lading of everything that is imported into the United States. A bill of lading is a document that describes a shipment: who sent it, where its going, what it contains, &c. 
+
+### Origin:
+
+Ambient Shipping grew out of a residency of The ![More&More Unlimited](http://www.moreandmore.world/) collective on ![Governor's Island](https://www.google.com/maps/place/Governors+Island/@40.6885841,-74.0281299,15z/data=!3m1!4b1!4m5!3m4!1s0x89c25a7ada7d834f:0x78c2917911c7f535!8m2!3d40.6894501!4d-74.016792) in collaboration with ![Surya Mattu](http://www.suryamattu.com/), ![Sarah Rothberg](http://sarahrothberg.com/) and ![Marina Zurkow](http://www.o-matic.com/) and it was made possible with support from the ![Lower Manhattan Cultural Council](http://lmcc.net/). More&More Unlimited produces critical and artistic work engaging with the impact of maritime shipping on deep oceans and the logistics of global trade.
